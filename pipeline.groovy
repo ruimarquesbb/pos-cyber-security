@@ -10,11 +10,33 @@ pipeline {
        stage('Checkout') {
             steps {
                 script {
-                   echo 'Fazer Checkout do projeto'
-                   sh "ls -la"
-                   sh "pwd"
-                }
-            }
-        }
+                   echo 'Fazendo Build do projeto'
+                       }
+                   }
+                          }
+       
+       stage('unit-test') {
+             steps {
+                 script {
+                    echo 'Fazendo teste do projeto'
+                        }
+                    }
+                           }
+     
+        stage('deploy to stage') {
+              steps {
+                  script {
+                     echo 'Fazendo Deploy to stage do projeto'
+                         }
+                     }
+                          }
+        
+         stage('Acceptance test') {
+                steps {
+                   script {
+                      echo 'Fazendo Acceptance test do projeto'
+                          }
+                      }
+                            }
      }
 }
