@@ -10,8 +10,7 @@ pipeline {
        stage('Checkout') {
             steps {
                 script {
-                    git branch: 'master',
-                        url: 'https://github.com/paulonill/exemplo-spring-mvc-thymeleaf.git'
+                   echo 'Fazer Checkout do projeto'
                 }
             }
         }
